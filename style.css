@@ -1,0 +1,443 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: all 0.3s ease-in-out;
+}
+
+.section-one {
+    margin-top: 100vh;
+    
+    /* Empuja la sección hacia abajo */
+}
+header.scrolled {
+    height: 70px;
+    /* Altura del header al hacer scroll */
+    padding: 0 20px;
+    /* Reduce el padding al hacer scroll */
+}
+
+.image {
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.logo img {
+    display: flex;
+    justify-content: center;
+    height: 250px;
+    /* Tamaño inicial del logo */
+    transition: all 0.8s ease-in-out;
+    /* Suaviza el cambio de tamaño */
+}
+
+header.scrolled .logo img {
+    height: 50px;
+    /* Tamaño reducido del logo al hacer scroll */
+}
+
+.xd {
+    color: white;
+}
+
+section {
+    background-color: white;
+    /* Fondo blanco para todas las secciones */
+    margin-top: 20px;
+    /* Espaciado entre secciones */
+    padding: 20px;
+    /* Espaciado interno */
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar {
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+header.scrolled .navbar {
+    display: flex;
+}
+
+header.scrolled .logo {
+    font-size: 1.5rem;
+}
+
+section {
+    height: 1500px;
+    background: linear-gradient(white, #f4f4f4);
+    padding-top: 100vh;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+    font-weight: 500;
+    display: flex;
+
+}
+
+.hero {
+    text-align: center;
+    padding: 50px;
+    background-color: #ffffff;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero-items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.hero-item {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    border-radius: 8px;
+}
+
+.antic-didone-regular {
+    font-family: "Antic Didone", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hero-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.hero-item:hover img {
+    transform: scale(1.2);
+}
+
+.hero-item:hover {
+    transform: scale(1.05);
+}
+
+.hero-item h3 {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.two-columns {
+    display: flex;
+    justify-content: center;   /* Centra horizontalmente las imágenes */
+    align-items: center;       /* Centra verticalmente si hay altura */
+    gap: 32px;                 /* Espacio entre imágenes */
+    margin: 0 auto;
+    width: 100%;
+}
+
+.two-columns .image {
+    flex: 1;
+}
+
+.two-columns .image img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.two-columns .description {
+    flex: 1;
+    font-size: 1.5rem;
+    line-height: 2;
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s ease;
+}
+
+section {
+    margin-top: 20px;
+    background-color: white;
+    /* Reduce el margen superior entre secciones */
+}
+
+.hero+section h2 {
+    margin-top: 10px;
+    /* Ajusta específicamente el margen superior del h2 */
+}
+
+footer {
+    background-color: #ffffff;
+    /* Color de fondo del footer */
+    padding: 20px;
+    /* Espaciado interno */
+    text-align: center;
+    /* Centra el contenido del footer */
+}
+
+.footer-logo {
+    display: flex;
+    justify-content:
+        left;
+    align-items: center;
+    margin-bottom: 10px;
+    /* Espaciado inferior */
+}
+
+.footer-logo img {
+    max-width: 100%;
+    /* Asegura que el logo no exceda el ancho del contenedor */
+    height: auto;
+    /* Mantiene la proporción del logo */
+    max-height: 80px;
+    /* Ajusta la altura máxima del logo */
+}
+
+.social-icons {
+    display: flex;
+    justify-content: right;
+    gap: 15px;
+    /* Espaciado entre los enlaces */
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #555;
+    /* Cambia el color al pasar el mouse */
+}
+
+h2 {
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* Drawer styles */
+.drawer {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    left: 0;
+    background-color: #35568a;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 60px;
+}
+
+.drawer a {
+    padding: 12px 32px;
+    text-decoration: none;
+    font-size: 1.2em;
+    color: #fff;
+    display: block;
+    transition: 0.2s;
+    font-family: 'Antic Didone', serif;
+}
+
+.drawer a:hover {
+    background: #22345a;
+}
+
+.close-drawer {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    font-size: 36px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.open-drawer-btn {
+    font-size: 32px;
+    cursor: pointer;
+    position: fixed;
+    top: 10px;
+    left: 15px;
+    z-index: 2100;
+    color: #35568a;
+    border-radius: 50%;
+    padding: 4px 12px;
+    /*box-shadow: 0 2px 8px rgba(0,0,0,0.08);*/
+    user-select: none;
+}
+
+.modal {
+    display: none;
+    /* Oculto por defecto */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    /* Oculta el scroll */
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Fondo oscuro semitransparente */
+    transition: opacity 0.3s ease;
+    /* Transición para el fondo */
+    opacity: 0;
+    /* Inicialmente transparente */
+}
+
+.modal.show {
+    display: block;
+    /* Muestra el modal */
+    opacity: 1;
+    /* Hace visible el modal */
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    /* Aumenta el tamaño máximo de la imagen */
+    max-height: 90%;
+    /* Aumenta el tamaño máximo de la imagen */
+    border-radius: 8px;
+    position: absolute;
+    top: 50%;
+    /* Centra verticalmente */
+    left: 50%;
+    /* Centra horizontalmente */
+    transform: translate(-50%, -50%) scale(2);
+    /* Escala inicial para el efecto */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Agrega sombra */
+    transition: transform 0.3s ease;
+    /* Transición para el efecto de zoom */
+}
+
+.modal.show .modal-content {
+    transform: translate(-50%, -50%) scale(1);
+    /* Escala al tamaño completo */
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.logoMaterial {
+    height: 70px !important;
+}
+
+.logo2 img {
+    height: 50px !important;
+}
+
+ .material-img {
+        width: 350px;
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 10px 0 0 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        display: block;
+    }
+
+    .material {
+        display: flex;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+
+    .material img {
+        width: 100%;
+        max-width: 350px;
+        border-radius: 10px 10px 10px 10px;
+    }
+
+    .material-content {
+        flex: 1;
+        padding: 32px 32px 32px 48px;
+        background: #fff;
+        border-radius: 0 18px 18px 0;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    }
+
+    .material-content h2 {
+        margin-top: 0;
+        font-size: 2.0em;
+        color: #35568a;
+    }
+
+    .material-content p {
+        font-size: 1.2em;
+        margin-bottom: 10px;
+        margin-left: 0;
+        text-align: justify;
+        text-justify: inter-word;
+    }
+
+    @media (max-width: 768px) {
+        .material {
+            flex-direction: column;
+        }
+
+        .material img {
+            border-radius: 10px 10px 0 0;
+        }
+    }
