@@ -401,44 +401,50 @@ h2 {
     .material {
         display: flex;
         align-items: center;
-        margin-bottom: 40px;
+        justify-content: center;
+        margin: 40px auto;
+        max-width: 900px;
+        width: 100%;
+        background: #fff; /* Elimina cualquier fondo morado */
+        box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        border-radius: 18px;
     }
 
+    /* Ajusta el contenido para que no tenga padding excesivo */
+    .material-content {
+        flex: 1;
+        padding: 32px;
+        background: #fff;
+        border-radius: 0 18px 18px 0;
+        box-shadow: none;
+        min-width: 0;
+        max-width: 600px;
+    }
+
+    /* Ajusta la imagen */
     .material img {
         width: 100%;
         max-width: 350px;
-        border-radius: 10px 10px 10px 10px;
+        border-radius: 18px 0 0 18px;
+        display: block;
+        margin: 0;
     }
 
-    .material-content {
-        flex: 1;
-        padding: 32px 32px 32px 48px;
-        background: #fff;
-        border-radius: 0 18px 18px 0;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-    }
-
-    .material-content h2 {
-        margin-top: 0;
-        font-size: 2.0em;
-        color: #35568a;
-    }
-
-    .material-content p {
-        font-size: 1.2em;
-        margin-bottom: 10px;
-        margin-left: 0;
-        text-align: justify;
-        text-justify: inter-word;
-    }
-
+    /* Responsive para móviles */
     @media (max-width: 768px) {
         .material {
             flex-direction: column;
+            max-width: 98vw;
+            border-radius: 18px;
         }
-
         .material img {
-            border-radius: 10px 10px 0 0;
+            border-radius: 18px 18px 0 0;
+            max-width: 98vw;
+        }
+        .material-content {
+            border-radius: 0 0 18px 18px;
+            padding: 16px;
+            max-width: 98vw;
         }
     }
 
